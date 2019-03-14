@@ -7,6 +7,7 @@ import { SyShoppingReviewComponent } from './sy-shopping-review/sy-shopping-revi
 import { SyFlowerComponent } from './sy-flower/sy-flower.component';
 import { SyKnittingComponent } from './sy-knitting/sy-knitting.component';
 import { SyChinalifeComponent } from './sy-chinalife/sy-chinalife.component';
+import { SyAddformComponent } from './sy-addform/sy-addform.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SyChinalifeComponent } from './sy-chinalife/sy-chinalife.component';
     SyShoppingReviewComponent,
     SyFlowerComponent,
     SyKnittingComponent,
-    SyChinalifeComponent
+    SyChinalifeComponent,
+    SyAddformComponent
   ],
   imports: [
     BrowserModule,
