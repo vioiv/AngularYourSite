@@ -2,11 +2,14 @@
   sy-chinalife works!
 </p>
 <ul>
-  <li *ngFor='let chinalife of chinalifes'>
+  <li *ngFor="let chinalife of chinalifes"
+    [class.selected]="chinalife === selectedChinaLife"
+    (click)="onSelect(chinalife)">
     <div><span>id : {{chinalife.id}}</span></div>
     <div><span>type : {{chinalife.type}}</span></div>
     <div><span>title : {{chinalife.title}}</span></div>
     <div><span>contents : {{chinalife.contents}}</span></div>
   </li>
+  <!--app-sy-addform [chinalife]="selectedChinaLife"></app-sy-addform-->
   <app-sy-addform></app-sy-addform>
 </ul>

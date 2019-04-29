@@ -15,7 +15,10 @@ export class SyChinalifeComponent implements OnInit {
   chinalifes: ChinaLife[];
 
   ngOnInit() {
+    //below is a way of static.
     //this.chinalifes = this.chinaLifeService.getChinaLifeByStatic();
+    
+    //below is a way of a subscription.
     this.chinaLifeService.getChinaLife().subscribe(ChinaLifes => this.chinalifes = ChinaLifes);
   }
 

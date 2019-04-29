@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ChinaLife } from '../sy-schemas/chinalife';
 
 @Component({
   selector: 'app-sy-addform',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SyAddformComponent implements OnInit {
 
+  @Input() chinaLife: ChinaLife;
   constructor() { }
 
   ngOnInit() {
