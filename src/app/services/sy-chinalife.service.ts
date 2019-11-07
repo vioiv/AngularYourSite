@@ -17,21 +17,19 @@ export class SyChinalifeService {
     private http: HttpClient
   ) { }
 
-  private log(message: string){
-    
-  }
-
-  getChinaLife(): Observable<ChinaLife[]>{
+  getChinaLifeByHttp(): Observable<ChinaLife[]>{
     return this.http.get<ChinaLife[]>(this.chinaLifeUrl)
     .pipe(catchError(this.handleError<ChinaLife[]>('getChinaLife', [])));
   }
 
-  getChinaLifeById(id: Number): Observable<ChinaLife>{
+  getChinaLife(id: number): Observable<ChinaLife[]>{
     const url = `${this.chinaLifeUrl}/${id}`;
-    return this.http.get<ChinaLife>(url).pipe(
-      tap(_ => this.log(`fetched chinallife id=${id}`)),
-      catchError(this.handleError<ChinaLife>(`getChinaLife id=${id}`))
-    );
+
+    return this.http.get<ChinaLife[]>(url)
+    .pipe(catchError(this.handleError<ChinaLife[]>('getChinaLife', [])));
+    // return this.http.get<ChinaLife[]>(url).pipe(
+    //   catchError(this.handleError<ChinaLife>(`getChinaLife id=${id}`))
+    // );
   }
 
   getChinaLifeRx(): Observable<ChinaLife[]> {
